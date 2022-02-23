@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'NoTime';
+  src: url('../font/NoTime.ttf');
+}
+*{
+	margin:0;
+	border:0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+  	outline:none;
+	text-align: center;
+}
+body{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url('../images/bg.jpg') no-repeat center / cover;
+}
+h1{
+	font-size: 3rem;
+	margin: 2rem;
+	font-family: 'NoTime';
+	position:relative;
+	z-index: 1;
+}
+h1::after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 40px;
+	background: #00acee ;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.textArea{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;	
+}
+.textArea textarea{
+	border: 2px solid rgb(179, 179, 179);
+	outline: none;
+	text-align: left;
+}
+.textArea textarea:focus{
+	border-color: rgb(0, 0, 0)
+}
+
+
+.textArea button{
+	margin-top: 1rem;
+	padding: .5rem;
+	font-size: 1.2rem;
+	outline: none;
+	border:2px solid black;
+	background:  #00acee ;
+	letter-spacing: 5px;
+	border-radius: 5px;
+	transition: transform .5s ease;
+}
+.textArea button:hover{
+	transform: scale(1.03);
+}
+
+.flexContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	/* align-items: baseline; */
+	width: 100%;
+	margin: 20px;
+  }
+  
+  .flexContainer>div {
+	background-color: rgb(235, 235, 235);
+	color: rgb(0, 0, 0);
+	flex: 0 1 25%;
+	font-size: 20px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	word-break: break-all;
+	font-family: 'poppins';
+	border-radius: 10px;
+	box-shadow: 13px 10px 5px -5px rgba(173,173,173,0.66);
+  }
+
+@media (max-width: 800px) {
+	.flexContainer>div {
+	 max-width: 100%;
+	 flex: 1 1 100%;
+	 }
+ }
+
+@media (max-width: 637px) {
+	h1::after{
+		height: 100px;
+	}
+ }
